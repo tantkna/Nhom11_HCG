@@ -62,7 +62,7 @@ namespace Nhom11_HCG
             if (x > 30)
             {
                 if (x > 30 && x < 35)
-                    return (30 - x) / 5;
+                    return (x - 30)/ 5;
                 else
                     return 1;
             }

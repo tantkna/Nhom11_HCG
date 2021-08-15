@@ -81,13 +81,23 @@ namespace Nhom11_HCG
                         sumTu += arrLuat[i].tinhTuSo();
                         sumMau += arrLuat[i].tinhMauSo();
                     }
-                    txtThoiGianTuoi.Text = (float)(sumTu / sumMau) + "";
+                    float kq = (float)(sumTu / sumMau);
+                    if (kq.ToString().Equals("NaN"))
+                    {
+                        txtThoiGianTuoi.Clear();
+                        throw new Exception("Không thể xác định được thời gian tưới!");
+                    }
+                    else
+                        txtThoiGianTuoi.Text = kq.ToString();
                 }
                 
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ex.Message.Contains("correct format"))
+                    MessageBox.Show("Thông tin nhập vào phải là số và không chứa kí tự đặc biệt!","Đã có lỗi xảy ra",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                 else    
+                    MessageBox.Show(ex.Message, "Đã có lỗi xảy ra", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

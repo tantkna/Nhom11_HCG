@@ -127,7 +127,7 @@ namespace Nhom11_HCG
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Hệ chuyên gia hỗ trợ điều khiển lượng nước tưới cho cây trồng";
             this.ResumeLayout(false);
             this.PerformLayout();
 
