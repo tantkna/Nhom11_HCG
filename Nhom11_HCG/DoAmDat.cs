@@ -9,14 +9,12 @@ namespace Nhom11_HCG
     class DoAmDat
     {
         public float y;
-
         public DoAmDat(float y)
         {   if (y < 0 || y > 10)
                 throw new Exception("Độ ẩm phải nằm trong khoảng [0;10].Vui lòng nhập lại!!!");
             else
                 this.y = y;
         }
-       
         public float tinhDoAmKho()
         {
             if (y >= 0 && y <= 3.5)
@@ -26,8 +24,7 @@ namespace Nhom11_HCG
                 else
                     return (7 - 2 * y) / 3;
             }
-            else return 0;
-            
+            else return 0;  
         }
         public float tinhDoAmVuaPhai()
         {
@@ -39,8 +36,6 @@ namespace Nhom11_HCG
                     return (15 - 2 * y) / 4;
             }
             else return 0;
-            
-
         }
         public float tinhDoAmUot()
         {

@@ -16,8 +16,7 @@ namespace Nhom11_HCG
                 throw new Exception("Nhiệt độ phải nằm trong khoảng [0;50].Vui lòng nhập lại!!!");
             else
                 this.x = x;
-        }
-        
+        } 
         public float tinhNhietDoLanh()
         {
             if (x >= 0 && x <= 10)
@@ -27,9 +26,7 @@ namespace Nhom11_HCG
                 else
                     return (10 - x) / 5;
             }
-            else return 0;
-                
-            
+            else return 0;   
         }
         public float tinhNhietDoMat()
         {
@@ -40,10 +37,7 @@ namespace Nhom11_HCG
                 else
                     return (20 - x) / 5;
             }
-            else return 0;
-                
-           
-            
+            else return 0;     
         }
         public float tinhNhietDoAmAp()
         {

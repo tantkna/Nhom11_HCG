@@ -38,7 +38,7 @@ namespace Nhom11_HCG
                     float y = float.Parse(txtDoAm.Text);
                     NhietDo nhietDo = new NhietDo(x);
                     DoAmDat doAmDat = new DoAmDat(y);
-                    GiaiMo[] arrLuat = new GiaiMo[8];
+                    GiaiMo[] arrLuat = new GiaiMo[12];
                     for (int i = 0; i < arrLuat.Length; i++)
                     {
                         arrLuat[i] = new GiaiMo();
@@ -62,7 +62,12 @@ namespace Nhom11_HCG
                     arrLuat[4].H = MIN(mNhietDoLanh, mDoAmVuaPhai);
                     arrLuat[5].H = MIN(mNhietDoMat, mDoAmVuaPhai);
                     arrLuat[6].H = MIN(mNhietDoNong, mDoAmKho);
-                    arrLuat[7].H = MIN(mNhietDoNong, mDoAmUot);
+                    arrLuat[7].H = MIN(mNhietDoNong, mDoAmVuaPhai);
+                    arrLuat[8].H = MIN(mNhietDoLanh, mDoAmKho);
+                    arrLuat[9].H = MIN(mNhietDoAmAp, mDoAmKho);
+                    arrLuat[10].H = MIN(mNhietDoMat, mDoAmKho);
+                    arrLuat[11].H = MIN(mNhietDoAmAp, mDoAmUot);
+                    
 
                     //B3:Giải mờ
                     arrLuat[0].thoiGianTuoiNgan();
@@ -72,8 +77,11 @@ namespace Nhom11_HCG
                     arrLuat[4].thoiGianTuoiNgan();
                     arrLuat[5].thoiGianTuoiNgan();
                     arrLuat[6].thoiGianTuoiLau();
-                    arrLuat[7].thoiGianTuoiNgan();
-
+                    arrLuat[7].thoiGianTuoiTrungBinh();
+                    arrLuat[8].thoiGianTuoiLau();
+                    arrLuat[9].thoiGianTuoiLau();
+                    arrLuat[10].thoiGianTuoiTrungBinh();
+                    arrLuat[11].thoiGianTuoiNgan();
                     float sumTu = 0;
                     float sumMau = 0;
                     for (int i = 0; i < arrLuat.Length; i++)
@@ -95,7 +103,8 @@ namespace Nhom11_HCG
             catch(Exception ex)
             {
                 if (ex.Message.Contains("correct format"))
-                    MessageBox.Show("Thông tin nhập vào phải là số và không chứa kí tự đặc biệt!","Đã có lỗi xảy ra",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Thông tin nhập vào phải là số và không chứa kí tự đặc biệt!",
+                        "Đã có lỗi xảy ra",MessageBoxButtons.OK,MessageBoxIcon.Error);
                  else    
                     MessageBox.Show(ex.Message, "Đã có lỗi xảy ra", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

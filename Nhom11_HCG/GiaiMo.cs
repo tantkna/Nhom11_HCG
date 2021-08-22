@@ -13,17 +13,14 @@ namespace Nhom11_HCG
         private float b;
         private float m2;
         private float m1;
-
         public float H { get => h; set => h = value; }
         public float A { get => a; set => a = value; }
         public float B { get => b; set => b = value; }
         public float M2 { get => m2; set => m2 = value; }
         public float M1 { get => m1; set => m1 = value; }
-
         public GiaiMo()
         {
         }
-
         public  float tinhTuSo()
         {
             return H / 6 * (3 * M2 * M2 - 3 * M1 * M1 + B * B - A * A + 3 * M2 * B + 3 * M1 * A);
