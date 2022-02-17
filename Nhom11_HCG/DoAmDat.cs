@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nhom11_HCG
 {
+    //them coment
     class DoAmDat
     {
         public float y;
